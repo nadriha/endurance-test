@@ -1,4 +1,5 @@
 import AboutMeSection from "@/components/modules/AboutMe";
+import ContactSection from "@/components/modules/Contact";
 import ZoomHello from "@/components/modules/Hello";
 import ProjectsSection from "@/components/modules/Projects";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <ZoomHello />
       <AboutMeSection />
       <ProjectsSection />
+      <ContactSection />
     </div>
   )
 }
