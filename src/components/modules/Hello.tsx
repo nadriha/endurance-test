@@ -24,8 +24,7 @@ export default function ZoomHello() {
         start: "top top",
         end: "bottom top",
         scrub: 1,
-        pin: true,
-        markers: true,
+        pin: true
       },
     })
 
@@ -69,7 +68,7 @@ export default function ZoomHello() {
         </div>
         <div ref={newPageRef} className="absolute inset-0 flex justify-center items-center opacity-0 z-0">
             <div className="text-center flex flex-col gap-2 ">
-              <h1 className="text-white text-7xl font-bold">I&apos;m Nadhira!</h1>
+              <h1 className="text-white text-8xl font-bold">I&apos;m Nadhira!</h1>
               <p>A passionate web developer, continuously learning and growing.</p>
             </div>
         </div>

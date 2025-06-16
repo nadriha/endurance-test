@@ -33,7 +33,7 @@ export default function AboutMeSection() {
     wordSegments.forEach((segment) => {
         const span = document.createElement("span")
         span.textContent = segment + " "
-        span.className = "text-segment text-3xl text-white opacity-0 transform translate-y-2 inline-block"
+        span.className = "text-segment lg:text-3xl text-white opacity-0 transform translate-y-2 inline-block"
         textContainer.appendChild(span)
     })
 
@@ -93,10 +93,9 @@ export default function AboutMeSection() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: section,
-            start: `top ${85 - index * 2}%`,
+            start: `top ${75 - index * 2}%`,
             end: `top ${50 - index * 2}%`,
-            scrub: 1,
-            markers: true,
+            scrub: 1
           },
         },
       )
@@ -109,7 +108,7 @@ export default function AboutMeSection() {
   }, [])
 
   return (
-    <div ref={sectionRef} className="min-h-[200vh] bg-gray-950 flex justify-center items-start pt-20">
+    <div ref={sectionRef} className="bg-gray-950 flex justify-center items-start py-20 max-w-screen overflow-x-hidden">
       <div className="flex flex-col items-center max-w-7xl gap-8 sticky top-20">
         <h1 className="text-white text-6xl font-bold" ref={aboutMeRef}>
           About Me
