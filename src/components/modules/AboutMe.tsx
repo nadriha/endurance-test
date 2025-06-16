@@ -12,7 +12,6 @@ export default function AboutMeSection() {
   const textContainerRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
 
-  // Text segments for the spinning wheel effect
   const wordSegments = [
   "Third-year", "Computer", "Science", "undergraduate",
   "at", "Universitas", "Indonesia,",
@@ -31,7 +30,7 @@ export default function AboutMeSection() {
     if (!section || !aboutMe || !textContainer || !image) return
 
     
-    wordSegments.forEach((segment, index) => {
+    wordSegments.forEach((segment) => {
         const span = document.createElement("span")
         span.textContent = segment + " "
         span.className = "text-segment text-3xl text-white opacity-0 transform translate-y-2 inline-block"
@@ -94,7 +93,7 @@ export default function AboutMeSection() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: section,
-            start: `top ${85 - index * 2}%`, // Stagger the trigger points
+            start: `top ${85 - index * 2}%`,
             end: `top ${50 - index * 2}%`,
             scrub: 1,
             markers: true,
@@ -103,7 +102,6 @@ export default function AboutMeSection() {
       )
     })
 
-    // Cleanup function
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
       textElements.forEach((el) => el.remove())
