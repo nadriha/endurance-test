@@ -60,18 +60,41 @@ export default function ZoomHello() {
   }, [])
 
   return (
-    <div ref={containerRef} className="h-screen flex bg-gray-950 justify-center place-items-center">
-        <div className="absolute inset-0 flex items-center justify-center">
-            <h1 ref={helloRef} className="text-white text-9xl font-bold">
-                Hello!
-            </h1>
-        </div>
-        <div ref={newPageRef} className="absolute inset-0 flex justify-center items-center opacity-0 z-0">
-            <div className="text-center flex flex-col gap-2 ">
-              <h1 className="text-white md:text-8xl text-6xl font-bold">I&apos;m Nadhira!</h1>
-              <p className="text-sm">A passionate web developer, continuously learning and growing.</p>
+    <div
+      ref={containerRef}
+      className="h-screen flex bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 justify-center place-items-center relative overflow-hidden"
+    >
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+      </div>
+
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h1
+          ref={helloRef}
+          className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-9xl font-bold"
+        >
+          Hello!
+        </h1>
+      </div>
+      <div ref={newPageRef} className="absolute inset-0 flex justify-center items-center opacity-0 z-0">
+        <div className="text-center flex flex-col gap-4">
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 md:text-8xl text-6xl font-bold">
+            I&apos;m Nadhira!
+          </h1>
+          <p className="text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed">
+            A passionate web developer, continuously learning and growing.
+          </p>
+          <div className="flex justify-center gap-4 mt-6">
+            <div className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white text-sm font-medium">
+              Frontend Developer
             </div>
+            <div className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full text-white text-sm font-medium">
+              UI/UX Enthusiast
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   )
 }
