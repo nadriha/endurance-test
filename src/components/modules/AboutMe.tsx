@@ -33,7 +33,7 @@ export default function AboutMeSection() {
     wordSegments.forEach((segment) => {
         const span = document.createElement("span")
         span.textContent = segment + " "
-        span.className = "text-segment lg:text-3xl text-white opacity-0 transform translate-y-2 inline-block"
+        span.className = "text-segment md:text-3xl text-white opacity-0 transform translate-y-2 inline-block"
         textContainer.appendChild(span)
     })
 
@@ -63,16 +63,16 @@ export default function AboutMeSection() {
       image,
       {
         opacity: 0,
-        x: 100,
+        x: 3000,
       },
       {
         opacity: 1,
         x: 0,
-        duration: 1,
+        duration: 2,
         ease: "power2.out",
         scrollTrigger: {
           trigger: section,
-          start: "top 70%",
+          start: "top 90%",
           end: "top 40%",
           scrub: 1,
         },
@@ -93,7 +93,7 @@ export default function AboutMeSection() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: section,
-            start: `top ${75 - index * 2}%`,
+            start: `top ${95 - index * 2}%`,
             end: `top ${50 - index * 2}%`,
             scrub: 1
           },
@@ -110,15 +110,15 @@ export default function AboutMeSection() {
   return (
     <div ref={sectionRef} className="bg-gray-950 flex justify-center items-start py-20 max-w-screen overflow-x-hidden">
       <div className="flex flex-col items-center max-w-7xl gap-8 sticky top-20">
-        <h1 className="text-white text-6xl font-bold" ref={aboutMeRef}>
+        <h1 className="text-white lg:text-6xl text-4xl font-bold" ref={aboutMeRef}>
           About Me
         </h1>
-        <div className="flex items-start gap-16">
-          <div className="flex flex-col gap-8 max-w-[600px]">
-            <div ref={textContainerRef} className="text-white text-xl leading-relaxed flex flex-wrap gap-x-2">
+        <div className="flex md:flex-row flex-col items-center md:items-start gap-8 md:gap-16">
+          <div className="flex flex-col gap-8 max-w-[600px] text-center md:text-left">
+            <div ref={textContainerRef} className="text-white md:text-xl leading-relaxed flex flex-wrap gap-x-2 justify-center md:justify-start">
             </div>
           </div>
-          <div ref={imageRef} className="overflow-hidden rounded-2xl w-[400px] h-[500px] relative">
+          <div ref={imageRef} className="overflow-hidden rounded-2xl w-[250px] h-[300px] md:w-[400px] md:h-[500px] relative">
             <Image
               src="/image/foto-saya.jpg"
               alt="Nadhir Raihana Hafez"

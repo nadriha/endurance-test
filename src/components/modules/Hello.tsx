@@ -30,7 +30,7 @@ export default function ZoomHello() {
 
     tl.to(hello, {
       scale: 60,
-      x: "-1650%",
+      x: "-1550%",
       y: "-600%",
       ease: "power2.inOut",
     }).to(
@@ -68,8 +68,8 @@ export default function ZoomHello() {
         </div>
         <div ref={newPageRef} className="absolute inset-0 flex justify-center items-center opacity-0 z-0">
             <div className="text-center flex flex-col gap-2 ">
-              <h1 className="text-white text-8xl font-bold">I&apos;m Nadhira!</h1>
-              <p>A passionate web developer, continuously learning and growing.</p>
+              <h1 className="text-white md:text-8xl text-6xl font-bold">I&apos;m Nadhira!</h1>
+              <p className="text-sm">A passionate web developer, continuously learning and growing.</p>
             </div>
         </div>
     </div>
