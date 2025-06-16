@@ -89,9 +89,6 @@ export default function ZoomHello() {
             <div className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white text-sm font-medium">
               Frontend Developer
             </div>
-            <div className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full text-white text-sm font-medium">
-              UI/UX Enthusiast
-            </div>
           </div>
         </div>
       </div>
