@@ -37,9 +37,16 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-    // Reset form
+
+    const { name, email, message } = formData
+
+    const subject = encodeURIComponent("New message from portfolio contact form")
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\n${message}`
+    )
+
+    window.location.href = `mailto:hafez.nadhira@gmail.com?subject=${subject}&body=${body}`
+
     setFormData({ name: "", email: "", message: "" })
   }
 
