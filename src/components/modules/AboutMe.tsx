@@ -129,7 +129,6 @@ export default function AboutMeSection() {
               className="text-slate-200 md:text-xl leading-relaxed flex flex-wrap gap-x-2 justify-center md:justify-start"
             ></div>
 
-            {/* Skills section */}
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               {["React", "Next.js", "TypeScript", "Tailwind CSS", "Django", "Spring Boot","Hono", "Drizzle", "Python"].map((skill, i) => (
                 <span
