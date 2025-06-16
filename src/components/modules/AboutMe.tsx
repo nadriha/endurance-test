@@ -131,7 +131,7 @@ export default function AboutMeSection() {
 
             {/* Skills section */}
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-              {["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Python"].map((skill, i) => (
+              {["React", "Next.js", "TypeScript", "Tailwind CSS", "Django", "Spring Boot","Hono", "Drizzle", "Python"].map((skill, i) => (
                 <span
                   key={i}
                   className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm text-blue-300 text-sm rounded-full border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300"

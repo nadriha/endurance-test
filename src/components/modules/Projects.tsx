@@ -45,7 +45,6 @@ export default function ProjectsSection() {
       technologies: ["React", "Next.js", "TypeScript", "Tailwind", "Hono", "Drizzle"],
       role: "Full Stack Engineer",
       duration: "1 months",
-      features: ["MCQ & essay generation", "Math/image support", "PDF export"],
     },
     {
       title: "AIGREE - Frontend Engineer",
